@@ -14,6 +14,7 @@
 		ACB94A312BBB07E400964D48 /* SourceKit_LSP_CommunicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A302BBB07E400964D48 /* SourceKit_LSP_CommunicatorTests.swift */; };
 		ACB94A3B2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A3A2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITests.swift */; };
 		ACB94A3D2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A3C2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITestsLaunchTests.swift */; };
+		ACB94A4C2BBB121C00964D48 /* LSPBindings in Frameworks */ = {isa = PBXBuildFile; productRef = ACB94A4B2BBB121C00964D48 /* LSPBindings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB94A4C2BBB121C00964D48 /* LSPBindings in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 				ACB94A2F2BBB07E400964D48 /* SourceKit-LSP-CommunicatorTests */,
 				ACB94A392BBB07E400964D48 /* SourceKit-LSP-CommunicatorUITests */,
 				ACB94A1C2BBB07E200964D48 /* Products */,
+				ACB94A4A2BBB121C00964D48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +132,13 @@
 			path = "SourceKit-LSP-CommunicatorUITests";
 			sourceTree = "<group>";
 		};
+		ACB94A4A2BBB121C00964D48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +155,9 @@
 			dependencies = (
 			);
 			name = "SourceKit-LSP-Communicator";
+			packageProductDependencies = (
+				ACB94A4B2BBB121C00964D48 /* LSPBindings */,
+			);
 			productName = "SourceKit-LSP-Communicator";
 			productReference = ACB94A1B2BBB07E200964D48 /* SourceKit-LSP-Communicator.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +230,9 @@
 				Base,
 			);
 			mainGroup = ACB94A122BBB07E200964D48;
+			packageReferences = (
+				ACB94A492BBB11E000964D48 /* XCRemoteSwiftPackageReference "sourcekit-lsp" */,
+			);
 			productRefGroup = ACB94A1C2BBB07E200964D48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -581,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACB94A492BBB11E000964D48 /* XCRemoteSwiftPackageReference "sourcekit-lsp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/sourcekit-lsp.git";
+			requirement = {
+				branch = release/5.10;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACB94A4B2BBB121C00964D48 /* LSPBindings */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACB94A492BBB11E000964D48 /* XCRemoteSwiftPackageReference "sourcekit-lsp" */;
+			productName = LSPBindings;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACB94A132BBB07E200964D48 /* Project object */;
 }
