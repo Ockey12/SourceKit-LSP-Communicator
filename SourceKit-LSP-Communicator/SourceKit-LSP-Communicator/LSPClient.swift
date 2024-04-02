@@ -58,6 +58,16 @@ final class LSPClient {
         print("Sending InitializedNotification")
         dump(notification)
     }
+
+    func sendDidOpenNotification(sourceFilePathString: String, sourceCode: String) {
+        let sourceFileURL = URL(fileURLWithPath: sourceFilePathString)
+        let document = TextDocumentItem(
+            uri: DocumentURI(sourceFileURL),
+            language: .swift,
+            version: 1,
+            text: sourceCode
+        )
+    }
 }
 
 private final class Client: MessageHandler {
