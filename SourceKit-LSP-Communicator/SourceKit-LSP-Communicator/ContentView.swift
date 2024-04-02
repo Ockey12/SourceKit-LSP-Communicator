@@ -11,10 +11,15 @@ struct ContentView: View {
                     "Project root path",
                     text: $rootPathString
                 )
+
                 Button("Send Initialize Request") {
                     client.sendInitializeRequest(projectRootPathString: rootPathString)
                 }
-            }
+
+                Button("Send Initialized Notification") {
+                    client.sendInitializedNotification()
+                }
+            } // Section "Initialization"
         } // VStack
         .padding()
         .frame(width: 800)
