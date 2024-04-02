@@ -67,6 +67,11 @@ final class LSPClient {
             version: 1,
             text: sourceCode
         )
+
+        let notification = DidOpenTextDocumentNotification(textDocument: document)
+        connection.send(notification)
+        print("Sending DidOpen Notification")
+        dump(notification)
     }
 }
 
