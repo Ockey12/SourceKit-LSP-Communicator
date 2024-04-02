@@ -32,7 +32,8 @@ final class LSPClient {
             workspaceFolders: nil
         )
 
-        dump(request, name: "InitializeRequest")
+        print("Sending InitializedRequest")
+        dump(request)
         print("")
 
         _ = connection.send(
@@ -52,7 +53,10 @@ final class LSPClient {
     } // func sendInitializeRequest
 
     func sendInitializedNotification() {
-        connection.send(InitializedNotification())
+        let notification = InitializedNotification()
+        connection.send(notification)
+        print("Sending InitializedNotification")
+        dump(notification)
     }
 }
 
