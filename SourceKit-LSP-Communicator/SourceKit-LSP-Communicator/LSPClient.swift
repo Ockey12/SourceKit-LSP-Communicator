@@ -49,6 +49,10 @@ final class LSPClient {
                 }
             }
         )
+    } // func sendInitializeRequest
+
+    func sendInitializedNotification() {
+        connection.send(InitializedNotification())
     }
 }
 
