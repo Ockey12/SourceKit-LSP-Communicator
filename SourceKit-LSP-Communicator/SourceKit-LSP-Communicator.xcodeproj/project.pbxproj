@@ -15,6 +15,7 @@
 		ACB94A3B2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A3A2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITests.swift */; };
 		ACB94A3D2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A3C2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITestsLaunchTests.swift */; };
 		ACB94A4C2BBB121C00964D48 /* LSPBindings in Frameworks */ = {isa = PBXBuildFile; productRef = ACB94A4B2BBB121C00964D48 /* LSPBindings */; };
+		ACB94A4E2BBC500D00964D48 /* LSPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB94A4D2BBC500D00964D48 /* LSPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		ACB94A362BBB07E400964D48 /* SourceKit-LSP-CommunicatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SourceKit-LSP-CommunicatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB94A3A2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceKit_LSP_CommunicatorUITests.swift; sourceTree = "<group>"; };
 		ACB94A3C2BBB07E400964D48 /* SourceKit_LSP_CommunicatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceKit_LSP_CommunicatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACB94A4D2BBC500D00964D48 /* LSPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				ACB94A1E2BBB07E200964D48 /* SourceKit_LSP_CommunicatorApp.swift */,
 				ACB94A202BBB07E200964D48 /* ContentView.swift */,
+				ACB94A4D2BBC500D00964D48 /* LSPClient.swift */,
 				ACB94A222BBB07E400964D48 /* Assets.xcassets */,
 				ACB94A272BBB07E400964D48 /* SourceKit_LSP_Communicator.entitlements */,
 				ACB94A242BBB07E400964D48 /* Preview Content */,
@@ -277,6 +280,7 @@
 			files = (
 				ACB94A212BBB07E200964D48 /* ContentView.swift in Sources */,
 				ACB94A1F2BBB07E200964D48 /* SourceKit_LSP_CommunicatorApp.swift in Sources */,
+				ACB94A4E2BBC500D00964D48 /* LSPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
