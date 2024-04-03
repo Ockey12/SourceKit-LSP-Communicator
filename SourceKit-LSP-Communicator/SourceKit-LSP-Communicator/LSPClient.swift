@@ -27,7 +27,7 @@ final class LSPClient {
 
         let rootURL = URL(fileURLWithPath: projectRootPathString)
         let request = InitializeRequest(
-            rootURI: DocumentURI(string: rootURL.deletingLastPathComponent().absoluteString),
+            rootURI: DocumentURI(string: rootURL.absoluteString),
             capabilities: ClientCapabilities(),
             workspaceFolders: nil
         )
@@ -56,6 +56,21 @@ final class LSPClient {
         let notification = InitializedNotification()
         connection.send(notification)
         print("Sending InitializedNotification")
+        dump(notification)
+    }
+
+    func sendDidOpenNotification(sourceFilePathString: String, sourceCode: String) {
+        let sourceFileURL = URL(fileURLWithPath: sourceFilePathString)
+        let document = TextDocumentItem(
+            uri: DocumentURI(sourceFileURL),
+            language: .swift,
+            version: 1,
+            text: sourceCode
+        )
+
+        let notification = DidOpenTextDocumentNotification(textDocument: document)
+        connection.send(notification)
+        print("Sending DidOpen Notification")
         dump(notification)
     }
 }
