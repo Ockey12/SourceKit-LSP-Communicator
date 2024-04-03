@@ -27,7 +27,7 @@ final class LSPClient {
 
         let rootURL = URL(fileURLWithPath: projectRootPathString)
         let request = InitializeRequest(
-            rootURI: DocumentURI(string: rootURL.deletingLastPathComponent().absoluteString),
+            rootURI: DocumentURI(string: rootURL.absoluteString),
             capabilities: ClientCapabilities(),
             workspaceFolders: nil
         )
