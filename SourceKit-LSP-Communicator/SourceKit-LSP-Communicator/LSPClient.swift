@@ -36,20 +36,16 @@ final class LSPClient {
         dump(request)
         print("")
 
-        _ = connection.send(
-            request,
-            queue: queue,
-            reply: { result in
-                switch result {
-                case .success(let response):
-                    print("\nINITIALIZATION SUCCEEDED\n")
-                    dump(response)
-                case .failure(let error):
-                    print("\nINITIALIZATION FAILED...\n")
-                    print(error)
-                }
+        _ = connection.send(request, queue: queue) { result in
+            switch result {
+            case .success(let response):
+                print("\nINITIALIZATION SUCCEEDED\n")
+                dump(response)
+            case .failure(let error):
+                print("\nINITIALIZATION FAILED...\n")
+                print(error)
             }
-        )
+        }
     } // func sendInitializeRequest
 
     func sendInitializedNotification() {
